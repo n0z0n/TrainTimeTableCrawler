@@ -3,7 +3,7 @@
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
 
-    using TimeTableCrawler.Annotations;
+    using TimeTableCrawler.Properties;
 
     public class ViewModelBase : INotifyPropertyChanged, IDataErrorInfo
     {

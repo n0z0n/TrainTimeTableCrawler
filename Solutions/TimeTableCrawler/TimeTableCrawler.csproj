@@ -38,28 +38,45 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commons\ModelBase.cs" />
     <Compile Include="Commons\ViewModelBase.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Commons\IPresenter.cs" />
+    <Compile Include="Models\Results\ResultsModel.cs" />
+    <Compile Include="Presenters\Results\ResultsPresenter.cs" />
+    <Compile Include="Models\Settings\SettingsModel.cs" />
+    <Compile Include="ViewModel\Results\ResultsViewModel.cs" />
+    <Compile Include="ViewModel\Settings\SettingsViewModel.cs" />
+    <Compile Include="Presenters\Settings\SettinsPresenter.cs" />
+    <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="View\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\MainModel.cs" />
+    <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="View\Results\ResultsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Results\ResultsView.Designer.cs">
+      <DependentUpon>ResultsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\SettingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Settings\SettingView.Designer.cs">
+      <DependentUpon>SettingView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,14 +102,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Results\" />
-    <Folder Include="Models\Settings\" />
-    <Folder Include="Presenters\Results\" />
-    <Folder Include="Presenters\Settings\" />
-    <Folder Include="ViewModel\Results\" />
-    <Folder Include="ViewModel\Settings\" />
-    <Folder Include="View\Results\" />
-    <Folder Include="View\Settings\" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
